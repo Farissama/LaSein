@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Komentar</title>
+        <link rel="stylesheet" href="komen.css">
+        <link rel="icon" href="./asset/logo tanpa persegi crop.png" type="icon">
+    </head>
+    <body>
+        <header>
+            <img src="./asset/logo tanpa persegi crop.png" alt="Logo">
+            <center>
+            <h2>Kolom Komentar</h2>
+            </center>
+        </header>
+        <section id="komen">
+            <div class="comment-container">
+                <div class="comment-form">
+                    <div class="comment-list">
+                        <!-- Daftar komentar akan ditampilkan di sini -->
+                    </div>
+                    <br><br><br><br><br><br><br><br><br><br><br><br>
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name" placeholder="Masukkan nama Anda">
+                    <label for="comment">Komentar:</label>
+                    <textarea id="comment" placeholder="Masukkan komentar Anda"></textarea>
+                    <button onclick="addComment()">Kirim Komentar</button>
+                </div>
+            </div>
+        </section>
+        <center>
+        <footer>
+            <p>&copy; 2023 LaSein | Faris Meika A.</p>
+        </footer>
+        </center>
+        <script>
+            // JavaScript untuk menambahkan komentar ke daftar komentar
+            function addComment() {
+                var name = document.getElementById("name").value;
+                var comment = document.getElementById("comment").value;
+
+                if (name.trim() !== "" && comment.trim() !== "") {
+                    var commentList = document.querySelector(".comment-list");
+                    var commentDiv = document.createElement("div");
+                    commentDiv.className = "comment";
+                    commentDiv.innerHTML = "<strong>" + name + ":</strong> " + comment;
+                    commentList.appendChild(commentDiv);
+
+                    // Bersihkan input
+                    document.getElementById("name").value = "";
+                    document.getElementById("comment").value = "";
+                }
+            }
+</script>
+    </body>
+</html>

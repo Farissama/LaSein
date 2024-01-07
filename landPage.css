@@ -1,0 +1,302 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 100vw;
+    min-height: 50vh;
+    display: grid;
+    grid-template-areas: 'nav' 'main' 'footer';
+}
+
+.nav {
+    grid-area: nav;
+    background-color: #38174C;
+    display: flex;
+    z-index: 1;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+}
+
+.logo img {
+    width: 70px;
+    margin-right: 10px;
+    margin-left: 30px;
+    margin-top: 20px;
+    float: left;
+}
+
+.logo {
+    display: flex;
+    color: white;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-family: 'Kiwi Maru', serif;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.nav a {
+    color: white;
+    font-family: 'LT Wave', sans-serif;
+    margin-right: 20px;
+    margin-left: 30px;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.nav a:hover {
+    color: #E55604;
+}
+
+.nav button {
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(255, 255, 255), 254;
+    border-color: #E55604;
+    border-style: groove;
+    width: 90px;
+    font-family: 'LT Wave', sans-serif;
+    font-size: 20px;
+    height: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.nav button:hover {
+    color: #E55604;
+}
+
+/* drop down */
+.container-menu {
+  background-color: #38174c;
+  display: none;
+  height: 100px;
+  width: 250px;
+  position: absolute;
+  opacity: 0.8;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* search box */
+.searchbox{
+    width: 80px;
+    height: 30px;
+    border-radius: 40px;
+    background-color: transparent;
+    align-items: center;
+    z-index: 2;
+    }
+    .searchtext{
+    position: absolute;
+    top: 45px;
+    left: 50px;
+    background: none;
+    outline: none;
+    line-height: 20px;
+    width: 160px;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    }
+
+    .searchtext::placeholder{
+        color: rgb(255, 255, 255);
+    }
+
+    .searchbox i{
+        color: rgb(255, 255, 255);
+        font-size: 19px;
+        margin-left: -70px;
+        margin-top: 35px;
+        position: absolute;
+    }
+    /* hover search */
+    #search-menu:hover + .container-menu,
+    .container-menu:hover{
+        display: block;
+    }
+/* end nav */
+
+/* start hero */
+.hero img {
+    width: 100%;
+}
+.hero h2 {
+    margin-left: 10px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+}
+
+.hero p {
+    color: white;
+    margin-left: 10px;
+    font-family: 'Inter', sans-serif;
+}
+
+.hero input[type="button"] {
+    margin-left: 150px;
+    background: linear-gradient(to right, #ff9900, #ff007a);
+    margin-top: 30px;
+    font-family: 'LT Wave';
+    padding: 14px 50px;
+    font-style: bold;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.centered {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+/* end hero */
+
+/* start keunggulan */
+.keunggulan {
+    margin-top: 10px;
+}
+
+.keunggulan h1 {
+    text-align: center;
+    font-family: 'kiwi maru';
+    font-size: 25px;
+}
+
+.keunggulan img {
+    justify-content: center;
+    margin-left: 90px;
+    cursor: pointer;
+}
+/* end keunggulan */
+
+/* start tentang interaksi */
+.tentang-interaksi img {
+    margin-right: 15%;
+}
+
+.tentang-interaksi {
+    margin-top: 10%;
+}
+
+.tentang-interaksi input[type="button"] {
+    margin-left: 150px;
+    background: linear-gradient(to right, #6638D6, #8F12AC);
+    margin-top: 30px;
+    margin-left: 10%;
+    font-family: 'LT Wave';
+    padding: 14px 50px;
+    font-style: bold;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.tentang-interaksi h1{
+    margin-left: 10%;
+    font-family: 'Eras ITC';
+}
+
+.dimensi{
+    color: #5848A9;
+}
+
+.tentang-interaksi p {
+    margin-left: 10%;
+    font-family: 'Inter', sans-serif;
+}
+/* end tentang interaksi */
+
+/* start tentang seni */
+.tentang-seni {
+    background-color: #DEDEDE;
+}
+
+.informasi {
+    color: #E7A300;
+}
+
+.tentang-seni h1 {
+    margin-top: 20PX;
+    font-family: 'Eras ITC';
+    margin-left: 700px;
+}
+
+.tentang-seni img {
+  margin-left: 100px;
+}
+
+.tentang-seni p {
+    margin-top: 10PX;
+    font-family: 'Inter', sans-serif;
+    margin-left: 700px;
+}
+
+.tentang-seni input[type="button"] {
+    margin-left: 500px;
+    background: linear-gradient(to right, #6638D6, #8F12AC);
+    margin-top: 30px;
+    font-family: 'LT Wave';
+    padding: 14px 50px;
+    font-style: bold;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+/* end tentang-seni */
+
+/* footer */
+.fa-comments {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: 1300px;
+}
+.fa-comments:hover {
+    color: #E7A300;
+}
+
+.footer {
+  background-color: #2A184A;
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+.icon {
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.icon svg:hover{
+  fill: #E55604;
+}
+
+.icon .fb{
+  margin-right:20px;
+}
+
+.copyright .sketchfab {
+  margin-left: 130px;
+}
+/* end footer */
